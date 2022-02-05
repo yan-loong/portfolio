@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   constructor(private http: HttpClient) {
-    this.http.get('api/test').subscribe(console.log)
+    this.http.get('/test').subscribe(console.log)
   }
 }

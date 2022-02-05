@@ -2,7 +2,10 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
+    "data-access": "libs/data-access",
     "task-management": "apps/task-management",
-    "task-management-e2e": "apps/task-management-e2e"
+    "task-management-e2e": "apps/task-management-e2e",
+    "ui": "libs/ui",
+    "util": "libs/util"
   }
 }

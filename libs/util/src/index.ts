@@ -1,1 +1,1 @@
-export * from './lib/util.module';
+export { replaceState, getPathName } from "./lib/location.utils"

@@ -6,8 +6,18 @@ const routes: Routes = [
   {
     path: ':lang',
     children: [
-      { path: 'login', loadChildren: () => import('../../features/login/login.module').then(m => m.LoginModule) }
+      { path: 'login', loadChildren: () => import('../../features/login/login.module').then(m => m.LoginModule) },
+      { path: '', redirectTo: 'login', pathMatch: 'full' }
     ]
+  },
+  {
+    path: '',
+    redirectTo: 'ka',
+    pathMatch: 'full'
+  },
+  {
+    path: '**',
+    loadChildren: () => import('../../features/not-found/not-found.module').then(m => m.NotFoundModule)
   }
 ]
 

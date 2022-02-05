@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "api": "apps/api",
+    "common": "libs/common",
     "data-access": "libs/data-access",
     "feature-task-management": "libs/feature-task-management",
     "task-management": "apps/task-management",

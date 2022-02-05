@@ -1,1 +1,1 @@
-export * from './lib/data-access.module';
+export { LanguageStore } from "./lib/states/language.store"

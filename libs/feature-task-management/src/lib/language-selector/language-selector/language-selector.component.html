@@ -1,0 +1,9 @@
+<div class="flex">
+    <div *ngFor="let language of languageStore.languages"
+        class="cursor-pointer mr-2 transition-transform hover:scale-110"
+        [ngClass]="{'opacity-60' : language.id !== (activeLanguage$ | async)?.id}"
+        [matTooltip]="language.name | translate" (click)="changeLanguage(language)">
+
+        <img class="w-5 " [src]="'assets/images/flags/' + language.name + '.svg'" [alt]="language.name">
+    </div>
+</div>

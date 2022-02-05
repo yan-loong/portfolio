@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@portfolio/common": ["libs/common/src/index.ts"],
       "@portfolio/data-access": ["libs/data-access/src/index.ts"],
       "@portfolio/feature-task-management": [
         "libs/feature-task-management/src/index.ts"

@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "task-management": "apps/task-management",
+    "task-management-e2e": "apps/task-management-e2e"
+  }
+}

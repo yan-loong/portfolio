@@ -2,7 +2,7 @@
   "projectType": "application",
   "root": "apps/task-management",
   "sourceRoot": "apps/task-management/src",
-  "prefix": "portfolio",
+  "prefix": "task-management",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",

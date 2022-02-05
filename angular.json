@@ -3,6 +3,7 @@
   "projects": {
     "api": "apps/api",
     "data-access": "libs/data-access",
+    "feature-task-management": "libs/feature-task-management",
     "task-management": "apps/task-management",
     "task-management-e2e": "apps/task-management-e2e",
     "ui": "libs/ui",

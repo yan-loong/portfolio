@@ -1,0 +1,1 @@
+export { HeaderModule as featureHeaderModule } from "./lib/header/header.module"

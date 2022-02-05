@@ -16,6 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@portfolio/data-access": ["libs/data-access/src/index.ts"],
+      "@portfolio/feature-task-management": [
+        "libs/feature-task-management/src/index.ts"
+      ],
       "@portfolio/ui": ["libs/ui/src/index.ts"],
       "@portfolio/util": ["libs/util/src/index.ts"]
     }

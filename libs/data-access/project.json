@@ -2,7 +2,7 @@
   "projectType": "library",
   "root": "libs/data-access",
   "sourceRoot": "libs/data-access/src",
-  "prefix": "portfolio",
+  "prefix": "data-access",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",

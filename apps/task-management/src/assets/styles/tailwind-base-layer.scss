@@ -1,0 +1,33 @@
+@layer base {
+    // Noto Sans Georgian
+    @font-face {
+        font-family: "NotoSansGeorgian-Regular";
+        src: url("/assets/fonts/Noto_Sans_Georgian/NotoSansGeorgian-Regular.ttf");
+    }
+
+    @font-face {
+        font-family: "NotoSansGeorgian-Medium";
+        src: url("/assets/fonts/Noto_Sans_Georgian/NotoSansGeorgian-Medium.ttf");
+    }
+
+    @font-face {
+        font-family: "NotoSansGeorgian-Bold";
+        src: url("/assets/fonts/Noto_Sans_Georgian/NotoSansGeorgian-Bold.ttf");
+    }
+
+    // Montserrat
+    @font-face {
+        font-family: "Montserrat-Regular";
+        src: url("/assets/fonts/Montserrat/Montserrat-Regular.ttf");
+    }
+
+    @font-face {
+        font-family: "Montserrat-Medium";
+        src: url("/assets/fonts/Montserrat/Montserrat-Medium.ttf");
+    }
+
+    @font-face {
+        font-family: "Montserrat-Bold";
+        src: url("/assets/fonts/Montserrat/Montserrat-Bold.ttf");
+    }
+}

@@ -2,7 +2,7 @@
   "projectType": "library",
   "root": "libs/util",
   "sourceRoot": "libs/util/src",
-  "prefix": "portfolio",
+  "prefix": "util",
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",

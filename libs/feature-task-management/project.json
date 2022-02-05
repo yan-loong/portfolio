@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/feature-task-management",
+  "sourceRoot": "libs/feature-task-management/src",
+  "prefix": "feature-task-management",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/feature-task-management"],
+      "options": {
+        "jestConfig": "libs/feature-task-management/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/feature-task-management/src/**/*.ts",
+          "libs/feature-task-management/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

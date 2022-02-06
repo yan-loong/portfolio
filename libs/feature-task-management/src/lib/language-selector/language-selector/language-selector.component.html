@@ -4,6 +4,7 @@
         [ngClass]="{'opacity-60' : language.id !== (activeLanguage$ | async)?.id}"
         [matTooltip]="language.name | translate" (click)="changeLanguage(language)">
 
-        <img class="w-5 " [src]="'assets/images/flags/' + language.name + '.svg'" [alt]="language.name">
+        <ui-flag class="block w-5 " [countryName]="language.name"></ui-flag>
+        
     </div>
 </div>

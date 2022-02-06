@@ -30,4 +30,12 @@
         font-family: "Montserrat-Bold";
         src: url("/assets/fonts/Montserrat/Montserrat-Bold.ttf");
     }
+
+    // Material icon
+    @font-face {
+        font-family: "Material Icons";
+        font-style: normal;
+        font-weight: 400;
+        src: url("/assets/fonts/Material/icons.woff2");
+    }  
 }

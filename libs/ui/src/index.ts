@@ -1,1 +1,3 @@
-export * from './lib/ui.module';
+export { FlagsModule } from "./lib/flags/flags.module";
+export { IconModule } from "./lib/icon/icon.module";
+export { CardModule } from "./lib/card/card.module"

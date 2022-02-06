@@ -1,8 +1,10 @@
-<div class="task-management-container font-primary-regular">
+<div class="h-full font-primary-regular grid grid-rows-[56px_auto]">
     <!-- Header -->
     <feature-task-management-header></feature-task-management-header>
 
     <!-- Primary Router -->
-    <router-outlet></router-outlet>
+    <div class="container mx-auto overflow-auto px-4 py-4">
+        <router-outlet></router-outlet>
+    </div>
 
 </div>

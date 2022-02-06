@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LanguageSelectorComponent } from './language-selector/language-selector.component';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { TranslateModule } from '@ngx-translate/core';
+import { FlagsModule } from "@portfolio/ui"
 
 
 
@@ -13,7 +14,8 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [
     CommonModule,
     MatTooltipModule,
-    TranslateModule
+    TranslateModule,
+    FlagsModule
   ],
   exports: [
     LanguageSelectorComponent

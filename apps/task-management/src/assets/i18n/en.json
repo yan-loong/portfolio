@@ -1,5 +1,17 @@
 {
-    "TEST":"TEST_EN",
+    "TEST": "TEST_EN",
     "ka": "Georgian",
-    "en": "English"
+    "en": "English",
+    "ABOUT_TITLE": "Task Management System",
+    "ABOUT_SUB_TITLE": "User Stories",
+    "ABOUT_CONDITION_1": "As a user I want ability to register in the system by entering full name, e-mail and password(no e-mail confirmations are required).",
+    "ABOUT_CONDITION_2": "As a user I want to login to the system with my e-mail and password.",
+    "ABOUT_CONDITION_3": "As a user I want to see list of tasks created by me or assigned to me",
+    "ABOUT_CONDITION_4": "As a user I want to be able to create new task by entering task title, description and due date",
+    "ABOUT_CONDITION_5": "As a user I want to be able to assign task to one or more other users",
+    "ABOUT_CONDITION_6": "As a user I want to be able to change task status assigned to me (NOT DONE, IN PROGRESS, DONE)",
+    "ABOUT_CONDITION_7": "As a user I want to be able to see near due or overdue tasks highlighted in my task list",
+    "ABOUT_CONDITION_8": "As a user I want to be able to filter task list by assignees, statuses or overdue",
+    "ABOUT_CONDITION_9": "As a user I want to be able to delete tasks from list",
+    "REQUIREMENTS": "Requirements"
 }

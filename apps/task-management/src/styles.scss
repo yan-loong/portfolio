@@ -5,8 +5,12 @@
 @tailwind components;
 @tailwind utilities;
 
-// Base Layer
+// Tailwind extended Layer
 @import "./assets/styles/tailwind-base-layer";
+@import "./assets/styles/tailwind-utilities-layer";
 
 // Angular Material Theme
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
+
+// Common scss
+@import "./assets/styles/common";

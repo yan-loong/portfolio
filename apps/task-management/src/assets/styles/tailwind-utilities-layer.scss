@@ -14,4 +14,8 @@
         -webkit-font-feature-settings: "liga";
         -webkit-font-smoothing: antialiased;
     }
+
+    .upper-case {
+        font-feature-settings: "case" on;
+    }
 }

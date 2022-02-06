@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { LanguageStore } from '@portfolio/data-access';
-import { NavigationExtras, Router } from '@angular/router';
+import { IsActiveMatchOptions, NavigationExtras, Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -40,8 +40,17 @@ export class RoutingService {
     return `/${this.languageStore.activeLanguage.name}/${path}`
   }
 
-
-
-
+  /**
+   * @description  Returns whether the url is activated.   
+   */
+  isActive(url: string, exact: boolean): boolean {
+    const isActiveMatchOptions: IsActiveMatchOptions = {
+      paths: exact ? 'exact' : 'subset',
+      queryParams: exact ? 'exact' : 'subset',
+      fragment: 'ignored',
+      matrixParams: 'ignored'
+    }
+    return this.router.isActive(url, isActiveMatchOptions)
+  }
 
 }

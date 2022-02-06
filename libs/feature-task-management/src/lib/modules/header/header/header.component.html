@@ -1,7 +1,7 @@
 <header class="flex justify-between bg-primary text-white h-14 px-4 py-4 shadow-lg">
     <div class="flex items-center">
         <!-- LOGO -->
-        <h1 class="font-primary-bold cursor-pointer" (click)="navigateTohome()">
+        <h1 class="font-primary-bold cursor-pointer" [routerLink]="'/'">
             TASK MANAGEMENT
         </h1>
 
@@ -13,13 +13,13 @@
 
     <div class="flex items-center">
         <!-- Login -->
-        <div class="flex items-center px-1 cursor-pointer" matRipple (click)="logIn()">
+        <div class="flex items-center p-2 rounded-md cursor-pointer " matRipple  [routerLink]="'./login'" routerLinkActive="bg-secondary">
             <ui-icon iconName="login"></ui-icon>
             <div class="ml-2 upper-case">{{"AUTHORIZATION" | translate}}</div>
         </div>
 
         <!-- Registration -->
-        <div class="ml-6 flex items-center px-1 cursor-pointer" matRipple>
+        <div  class="flex items-center p-2 rounded-md cursor-pointer " matRipple  [routerLink]="'./registration'" routerLinkActive="bg-secondary">
             <ui-icon iconName="person_add_alt_1"></ui-icon>
             <div class="ml-2 upper-case">{{"REGISTRATION" | translate}}</div>
         </div>

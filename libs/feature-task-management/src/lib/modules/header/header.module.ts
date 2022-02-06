@@ -5,6 +5,7 @@ import { LanguageSelectorModule } from '../language-selector/language-selector.m
 import { IconModule } from '@portfolio/ui';
 import { TranslateModule } from '@ngx-translate/core';
 import { MatRippleModule } from '@angular/material/core';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MatRippleModule } from '@angular/material/core';
     IconModule,
     LanguageSelectorModule,
     MatRippleModule,
+    RouterModule,
     TranslateModule
   ],
   exports: [

@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
+import { ContainerComponent } from '../layout/container/container.component';
 
 const routes: Routes = [
   {
     path: ':lang',
+    component: ContainerComponent,
     children: [
       {
         path: 'home',
@@ -18,6 +20,10 @@ const routes: Routes = [
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'
+      },
+      {
+        path: '**',
+        loadChildren: () => import('../../features/not-found/not-found.module').then(m => m.NotFoundModule)
       }
     ]
   },
@@ -26,11 +32,6 @@ const routes: Routes = [
     redirectTo: 'ka',
     pathMatch: 'full'
   },
-
-  {
-    path: '**',
-    loadChildren: () => import('../../features/not-found/not-found.module').then(m => m.NotFoundModule)
-  }
 ]
 
 @NgModule({

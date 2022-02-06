@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Language, Languages } from "@portfolio/common"
 import { LanguageStore } from "@portfolio/data-access";
 import { getPathName, replaceState } from "@portfolio/util"
+import { RoutingService } from '../../services/routing.service';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +13,8 @@ export class LanguageService {
 
   constructor(
     private languageStore: LanguageStore,
-    private translateService: TranslateService
+    private translateService: TranslateService,
+    private routingService: RoutingService
   ) {
 
   }
@@ -61,7 +63,7 @@ export class LanguageService {
     const [empty, currentLangName, ...currentRoute] = getPathName().split("/");
     const newPathName: string = [empty, lang.name, ...currentRoute].join("/");
 
-    replaceState(newPathName)
+    this.routingService.navigateTo([newPathName])
   }
 
 }

@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { RoutingService } from '../../../services/routing.service';
 
 @Component({
   selector: 'feature-task-management-header',
@@ -8,9 +9,19 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private routingService: RoutingService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  navigateTohome() {
+    this.routingService.navigateToAbsolute(["/"])
+  }
+
+  logIn() {
+    this.routingService.navigateToAbsolute(["login"])
   }
 
 }

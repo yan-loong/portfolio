@@ -9,10 +9,11 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 export class HomeContainerComponent implements OnInit {
 
   constructor(
-
+   
   ) { }
 
   ngOnInit(): void {
   }
+
 
 }

@@ -1,2 +1,3 @@
-export { HeaderModule as featureHeaderModule } from "./lib/header/header.module";
-export { LanguageService } from "./lib/language-selector/language.service"
+export { HeaderModule as featureHeaderModule } from "./lib/modules/header/header.module";
+export { LanguageService } from "./lib/modules/language-selector/language.service";
+export { RoutingService } from "./lib/services/routing.service"

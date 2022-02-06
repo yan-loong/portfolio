@@ -1,0 +1,27 @@
+<header class="flex justify-between bg-primary text-white h-14 px-4 py-4 shadow-lg">
+    <div class="flex items-center">
+        <!-- LOGO -->
+        <h1 class="font-primary-bold cursor-pointer" (click)="navigateTohome()">
+            TASK MANAGEMENT
+        </h1>
+
+        <!-- Language Selector -->
+        <div class="ml-4">
+            <feature-task-management-language-selector></feature-task-management-language-selector>
+        </div>
+    </div>
+
+    <div class="flex items-center">
+        <!-- Login -->
+        <div class="flex items-center px-1 cursor-pointer" matRipple (click)="logIn()">
+            <ui-icon iconName="login"></ui-icon>
+            <div class="ml-2 upper-case">{{"AUTHORIZATION" | translate}}</div>
+        </div>
+
+        <!-- Registration -->
+        <div class="ml-6 flex items-center px-1 cursor-pointer" matRipple>
+            <ui-icon iconName="person_add_alt_1"></ui-icon>
+            <div class="ml-2 upper-case">{{"REGISTRATION" | translate}}</div>
+        </div>
+    </div>
+</header>

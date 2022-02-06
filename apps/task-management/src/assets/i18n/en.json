@@ -13,5 +13,7 @@
     "ABOUT_CONDITION_7": "As a user I want to be able to see near due or overdue tasks highlighted in my task list",
     "ABOUT_CONDITION_8": "As a user I want to be able to filter task list by assignees, statuses or overdue",
     "ABOUT_CONDITION_9": "As a user I want to be able to delete tasks from list",
-    "REQUIREMENTS": "Requirements"
+    "REQUIREMENTS": "Requirements",
+    "AUTHORIZATION": "Authorization",
+    "REGISTRATION": "Registration"
 }

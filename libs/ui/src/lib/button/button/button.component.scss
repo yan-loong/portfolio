@@ -1,0 +1,6 @@
+button {
+    @apply uppercase font-bold text-sm cursor-pointer px-6 py-2 shadow-md rounded-sm inline-flex items-center justify-center;
+    &.primary {
+        @apply bg-primary text-white;
+    }
+}

@@ -14,5 +14,13 @@
     "ABOUT_CONDITION_9": "მომხმარებელს უნდა შეეძლოს დავალების წაშლა",
     "REQUIREMENTS": "ტექნოლოგიები",
     "AUTHORIZATION": "ავტორიზაცია",
-    "REGISTRATION": "რეგისტრაცია"
+    "REGISTRATION": "რეგისტრაცია",
+    "FIRSTNAME": "სახელი",
+    "LASTNAME": "გვარი",
+    "EMAIL": "ემაილი",
+    "THIS_FIELD_IS_REQUIRED": "ეს ველი აუცილებელია",
+    "INVALID_FORMAT": "არასწორი ფორმატი",
+    "PASSWORD": "პაროლი",
+    "CONFIRM_PASSWORD": "გაიმეორეთ პაროლი",
+    "NOT_EQUAL_PASSWORD": "პაროლი არ ემთხვევა"
 }

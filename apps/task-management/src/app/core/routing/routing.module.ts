@@ -17,6 +17,10 @@ const routes: Routes = [
         loadChildren: () => import('../../features/login/login.module').then(m => m.LoginModule)
       },
       {
+        path: 'registration',
+        loadChildren: () => import('../../features/registration/registration.module').then(m => m.RegistrationModule)
+      },
+      {
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'
@@ -32,6 +36,7 @@ const routes: Routes = [
     redirectTo: 'ka',
     pathMatch: 'full'
   },
+
 ]
 
 @NgModule({

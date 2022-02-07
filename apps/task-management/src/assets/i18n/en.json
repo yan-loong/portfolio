@@ -15,5 +15,13 @@
     "ABOUT_CONDITION_9": "As a user I want to be able to delete tasks from list",
     "REQUIREMENTS": "Requirements",
     "AUTHORIZATION": "Authorization",
-    "REGISTRATION": "Registration"
+    "REGISTRATION": "Registration",
+    "FIRSTNAME": "First name",
+    "LASTNAME": "Last name",
+    "EMAIL": "E-mail",
+    "THIS_FIELD_IS_REQUIRED": "This field is required",
+    "INVALID_FORMAT": "invalid Format",
+    "PASSWORD:": "Password",
+    "CONFIRM_PASSWORD": "Confirm Password",
+    "NOT_EQUAL_PASSWORD": "Passwords is not equal"
 }

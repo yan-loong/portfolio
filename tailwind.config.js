@@ -14,11 +14,15 @@ module.exports = {
         lightgray: '#F9F9F9',
         darkgray: '#E8EAEF'
       },
+      fontSize: {
+        'size-inherit': 'inherit'
+      }
     },
     fontFamily: {
       'primary-regular': ['NotoSansGeorgian-Regular', 'Montserrat-Regular'],
       'primary-medium': ['NotoSansGeorgian-Medium', 'Montserrat-Medium'],
-      'primary-bold': ['NotoSansGeorgian-Bold', 'Montserrat-Bold']
+      'primary-bold': ['NotoSansGeorgian-Bold', 'Montserrat-Bold'],
+      'inherit': 'inherit'
     }
   },
   plugins: [],

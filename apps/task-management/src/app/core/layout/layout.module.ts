@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContainerComponent } from './container/container.component';
 import { RoutingModule } from '../routing/routing.module';
-import { featureHeaderModule } from "@portfolio/feature-task-management"
+import { featureHeaderModule, LoadingModule } from "@portfolio/feature-task-management"
 
 
 @NgModule({
@@ -13,6 +13,7 @@ import { featureHeaderModule } from "@portfolio/feature-task-management"
     CommonModule,
     RoutingModule,
     featureHeaderModule,
+    LoadingModule
   ],
   exports: [
     ContainerComponent,

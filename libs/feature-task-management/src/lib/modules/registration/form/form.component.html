@@ -1,71 +1,70 @@
 <form [formGroup]="form" (ngSubmit)="submit()">
-    <div class=" max-w-lg mx-auto border border-black border-opacity-10 rounded-sm p-1 sm:p-4">
-        <div class=" grid  grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-3 ">
-            <!-- first Name -->
-            <mat-form-field class="font-primary-regular" appearance="fill">
-                <mat-label> {{"FIRSTNAME" | translate}}</mat-label>
-                <input type="text" matInput formControlName="firstName" [placeholder]="'FIRSTNAME' | translate">
-                <mat-error *ngIf="form.get('firstName')?.hasError('required')"
-                    class="font-primary-bold upper-case uppercase">
-                    {{"THIS_FIELD_IS_REQUIRED" | translate}}
-                </mat-error>
-            </mat-form-field>
 
-            <!-- last name -->
-            <mat-form-field class="font-primary-regular" appearance="fill">
-                <mat-label> {{"LASTNAME" | translate}}</mat-label>
-                <input type="text" matInput formControlName="lastName" [placeholder]="'LASTNAME' | translate">
-                <mat-error *ngIf="form.get('lastName')?.hasError('required')"
-                    class="font-primary-bold upper-case uppercase">
-                    {{"THIS_FIELD_IS_REQUIRED" | translate}}
-                </mat-error>
-            </mat-form-field>
+    <div class=" grid  grid-cols-1 sm:grid-cols-2 gap-1 sm:gap-3 text-size-inherit">
+        <!-- first Name -->
+        <mat-form-field class="font-primary-regular" appearance="fill">
+            <mat-label> {{"FIRSTNAME" | translate}}</mat-label>
+            <input type="text" matInput formControlName="firstName" [placeholder]="'FIRSTNAME' | translate">
+            <mat-error *ngIf="form.get('firstName')?.hasError('required')"
+                class="font-primary-bold upper-case uppercase">
+                {{"THIS_FIELD_IS_REQUIRED" | translate}}
+            </mat-error>
+        </mat-form-field>
 
-            <!-- email -->
-            <mat-form-field class="font-primary-regular col-span-full" appearance="fill">
-                <mat-label> {{"EMAIL" | translate}}</mat-label>
-                <input type="text" matInput formControlName="email" [placeholder]="'EMAIL' | translate">
-                <mat-error *ngIf="form.get('email')?.hasError('required')"
-                    class="font-primary-bold upper-case uppercase">
-                    {{"THIS_FIELD_IS_REQUIRED" | translate}}
-                </mat-error>
-                <mat-error *ngIf="form.get('email')?.hasError('email')" class="font-primary-bold upper-case uppercase">
-                    {{"INVALID_FORMAT" | translate}}
-                </mat-error>
-            </mat-form-field>
+        <!-- last name -->
+        <mat-form-field class="font-primary-regular" appearance="fill">
+            <mat-label> {{"LASTNAME" | translate}}</mat-label>
+            <input type="text" matInput formControlName="lastName" [placeholder]="'LASTNAME' | translate">
+            <mat-error *ngIf="form.get('lastName')?.hasError('required')"
+                class="font-primary-bold upper-case uppercase">
+                {{"THIS_FIELD_IS_REQUIRED" | translate}}
+            </mat-error>
+        </mat-form-field>
 
-            <!-- password-->
-            <mat-form-field class="font-primary-regular" appearance="fill">
-                <mat-label> {{"PASSWORD" | translate}}</mat-label>
-                <input type="password" matInput formControlName="password" [placeholder]="'PASSWORD' | translate">
-                <mat-error *ngIf="form.get('password')?.hasError('required')"
-                    class="font-primary-bold upper-case uppercase">
-                    {{"THIS_FIELD_IS_REQUIRED" | translate}}
-                </mat-error>
-            </mat-form-field>
+        <!-- email -->
+        <mat-form-field class="font-primary-regular col-span-full" appearance="fill">
+            <mat-label> {{"EMAIL" | translate}}</mat-label>
+            <input type="text" matInput formControlName="email" [placeholder]="'EMAIL' | translate">
+            <mat-error *ngIf="form.get('email')?.hasError('required')" class="font-primary-bold upper-case uppercase">
+                {{"THIS_FIELD_IS_REQUIRED" | translate}}
+            </mat-error>
+            <mat-error *ngIf="form.get('email')?.hasError('email')" class="font-primary-bold upper-case uppercase">
+                {{"INVALID_FORMAT" | translate}}
+            </mat-error>
+        </mat-form-field>
 
-            <!-- confirm password-->
-            <mat-form-field class="font-primary-regular" appearance="fill">
-                <mat-label> {{"CONFIRM_PASSWORD" | translate}}</mat-label>
-                <input type="password" matInput formControlName="confirmPassword"
-                    [placeholder]="'CONFIRM_PASSWORD' | translate">
+        <!-- password-->
+        <mat-form-field class="font-primary-regular" appearance="fill">
+            <mat-label> {{"PASSWORD" | translate}}</mat-label>
+            <input type="password" matInput formControlName="password" [placeholder]="'PASSWORD' | translate">
+            <mat-error *ngIf="form.get('password')?.hasError('required')"
+                class="font-primary-bold upper-case uppercase">
+                {{"THIS_FIELD_IS_REQUIRED" | translate}}
+            </mat-error>
+        </mat-form-field>
 
-                <mat-error *ngIf="form.get('confirmPassword')?.hasError('required')"
-                    class="font-primary-bold upper-case uppercase">
-                    {{"THIS_FIELD_IS_REQUIRED" | translate}}
-                </mat-error>
-                <mat-error *ngIf="form.get('confirmPassword')?.touched && form?.hasError('notEqual')" clas
-                    class="font-primary-bold upper-case uppercase">
-                    {{"NOT_EQUAL_PASSWORD" | translate}}
-                </mat-error>
-            </mat-form-field>
+        <!-- confirm password-->
+        <mat-form-field class="font-primary-regular" appearance="fill">
+            <mat-label> {{"CONFIRM_PASSWORD" | translate}}</mat-label>
+            <input type="password" matInput formControlName="confirmPassword"
+                [placeholder]="'CONFIRM_PASSWORD' | translate">
 
-        </div>
+            <mat-error *ngIf="form.get('confirmPassword')?.hasError('required')"
+                class="font-primary-bold upper-case uppercase">
+                {{"THIS_FIELD_IS_REQUIRED" | translate}}
+            </mat-error>
+            <mat-error *ngIf="form.get('confirmPassword')?.touched && form?.hasError('notEqual')" clas
+                class="font-primary-bold upper-case uppercase">
+                {{"NOT_EQUAL_PASSWORD" | translate}}
+            </mat-error>
+        </mat-form-field>
 
-        <div class="flex items-center justify-center mt-8">
-            <ui-button color="primary" type="submit">
-                <div>{{"REGISTRATION" | translate}}</div>
-            </ui-button>
-        </div>
     </div>
+
+    <div class="flex items-center justify-center mt-8">
+        <ui-button color="primary" type="submit" [disabled]="form.pristine">
+            <div>{{"REGISTRATION" | translate}}</div>
+        </ui-button>
+    </div>
+
 </form>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LoadingService } from '@portfolio/feature-task-management';
+import { distinctUntilChanged, Observable } from 'rxjs';
 
 @Component({
   selector: 'task-management-container',
@@ -6,8 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./container.component.scss']
 })
 export class ContainerComponent implements OnInit {
+  isLoadingVisible$: Observable<boolean>;
 
-  constructor() { }
+  constructor(
+    private LoadingService: LoadingService
+  ) {
+    this.isLoadingVisible$ = this.LoadingService.isVisible$
+      .pipe(
+        distinctUntilChanged()
+      )
+  }
 
   ngOnInit(): void {
   }

@@ -21,7 +21,9 @@
     "EMAIL": "E-mail",
     "THIS_FIELD_IS_REQUIRED": "This field is required",
     "INVALID_FORMAT": "invalid Format",
-    "PASSWORD:": "Password",
+    "PASSWORD": "Password",
     "CONFIRM_PASSWORD": "Confirm Password",
-    "NOT_EQUAL_PASSWORD": "Passwords is not equal"
+    "NOT_EQUAL_PASSWORD": "Passwords is not equal",
+    "REGISTRATION_FINISHED_SUCCESSFULLY": "Registration finished Succesfully",
+    "REGISTRATION_FINISHED_UNSUCCESSFULLY": "Registration finished unsuccessfully"
 }

@@ -8,6 +8,8 @@ import { LayoutModule } from './core/layout/layout.module';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { RoutingModule } from './core/routing/routing.module';
+import { httpInterceptorProviders } from './core/interceptors';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -29,9 +31,12 @@ export function HttpLoaderFactory(http: HttpClient) {
       }
     }),
     LayoutModule,
-    RoutingModule
+    RoutingModule,
+    MatSnackBarModule
   ],
-  providers: [],
+  providers: [
+    httpInterceptorProviders
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

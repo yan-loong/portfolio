@@ -2,3 +2,6 @@ html,
 body {
     @apply h-screen bg-darkgray;
 }
+.mat-simple-snackbar{
+    @apply font-inherit text-size-inherit
+}

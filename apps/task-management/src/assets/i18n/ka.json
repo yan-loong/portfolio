@@ -22,5 +22,7 @@
     "INVALID_FORMAT": "არასწორი ფორმატი",
     "PASSWORD": "პაროლი",
     "CONFIRM_PASSWORD": "გაიმეორეთ პაროლი",
-    "NOT_EQUAL_PASSWORD": "პაროლი არ ემთხვევა"
+    "NOT_EQUAL_PASSWORD": "პაროლი არ ემთხვევა",
+    "REGISTRATION_FINISHED_SUCCESSFULLY": "რეგისტრაცია წარმატებით დამთავრდა",
+    "REGISTRATION_FINISHED_UNSUCCESSFULLY": "რეგისტრაცია წარუამტებლად დამთავრდა"
 }

@@ -3,8 +3,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { User } from '@portfolio/common';
 import { RegistrationService } from '@portfolio/data-access';
-import { catchError, delay, of } from 'rxjs';
+import { BehaviorSubject, catchError, delay, finalize, of, Subject } from 'rxjs';
 import { LoggerService } from '../../../services/logger.service';
+import { BaseForm } from '../../shared/form/base-form';
 import { equalValidator } from '../validators/equal.validator';
 
 @Component({
@@ -13,16 +14,15 @@ import { equalValidator } from '../validators/equal.validator';
   styleUrls: ['./form.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FormComponent implements OnInit {
-
-  form: FormGroup;
+export class FormComponent extends BaseForm implements OnInit {
 
   constructor(
     private registrationService: RegistrationService,
     private fb: FormBuilder,
     private loggerService: LoggerService,
-    private translateService: TranslateService,
   ) {
+    super();
+
     this.form = this.fb.group(
       {
         firstName: ['', [Validators.required]],
@@ -33,38 +33,35 @@ export class FormComponent implements OnInit {
       },
       { validators: equalValidator('password', 'confirmPassword') }
     )
+
   }
 
   ngOnInit(): void {
 
+
   }
 
   submit() {
-    if (this.isValid) {
+    if (this.isValid && !this.isLoading) {
+      this.loading.next(true);
+
       this.registrationService.registration(this.value)
+        .pipe(
+          finalize(() => this.loading.next(false))
+        )
         .subscribe(
           {
-            next: () => {
-              const message: string = this.translateService.instant("REGISTRATION_FINISHED_SUCCESSFULLY")
-              this.loggerService.logSuccess(message)
+            next: (res) => {
+              this.loggerService.logSuccess("REGISTRATION_FINISHED_SUCCESSFULLY")
             },
             error: (error) => {
-              const message: string = this.translateService.instant("REGISTRATION_FINISHED_UNSUCCESSFULLY")
-              this.loggerService.logError(message)
-
+              this.loggerService.logError("REGISTRATION_FINISHED_UNSUCCESSFULLY")
             }
           }
         )
     }
   }
 
-  get isValid(): boolean {
-    return this.form.valid
-  }
 
-  get value(): User {
-    const { value } = this.form;
-    return value;
-  }
 
 }

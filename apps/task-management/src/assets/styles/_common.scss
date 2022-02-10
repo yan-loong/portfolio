@@ -2,6 +2,9 @@ html,
 body {
     @apply h-screen bg-darkgray;
 }
-.mat-simple-snackbar{
-    @apply font-inherit text-size-inherit
+.mat-simple-snackbar {
+    @apply font-inherit text-size-inherit text-center;
+}
+.mat-form-field-appearance-fill .mat-form-field-flex {
+    @apply bg-primary bg-opacity-10
 }

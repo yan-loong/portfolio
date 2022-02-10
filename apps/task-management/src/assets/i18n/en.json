@@ -19,11 +19,15 @@
     "FIRSTNAME": "First name",
     "LASTNAME": "Last name",
     "EMAIL": "E-mail",
+    "USERNAME":"Username",
     "THIS_FIELD_IS_REQUIRED": "This field is required",
     "INVALID_FORMAT": "invalid Format",
     "PASSWORD": "Password",
     "CONFIRM_PASSWORD": "Confirm Password",
     "NOT_EQUAL_PASSWORD": "Passwords is not equal",
     "REGISTRATION_FINISHED_SUCCESSFULLY": "Registration finished Succesfully",
-    "REGISTRATION_FINISHED_UNSUCCESSFULLY": "Registration finished unsuccessfully"
+    "REGISTRATION_FINISHED_UNSUCCESSFULLY": "Registration finished unsuccessfully",
+    "USER_LOGIN_SUCCESSFULLY": "Successfully logged in",
+    "USER_LOGIN_UNSUCCESSFULLY": "Invalid Credentials",
+    "LOG_IN": "Log In"
 }

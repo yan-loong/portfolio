@@ -62,7 +62,7 @@
     </div>
 
     <div class="flex items-center justify-center mt-8">
-        <ui-button color="primary" type="submit" [disabled]="form.pristine">
+        <ui-button color="primary" type="submit" [disabled]="!!(form.pristine || (loading | async))">
             <div>{{"REGISTRATION" | translate}}</div>
         </ui-button>
     </div>

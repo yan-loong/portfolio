@@ -1,5 +1,7 @@
 button {
-    @apply uppercase font-bold text-sm cursor-pointer px-7 py-3 shadow-md rounded-sm inline-flex items-center justify-center disabled:opacity-70;
+    @apply uppercase font-bold text-sm 
+    cursor-pointer px-7 py-3 shadow-md rounded-sm 
+    inline-flex items-center justify-center disabled:opacity-70 min-w-[175px];
     &.primary {
         @apply bg-primary text-white;
     }

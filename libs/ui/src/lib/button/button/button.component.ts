@@ -9,7 +9,7 @@ import { ThemePalette } from '@angular/material/core';
 })
 export class ButtonComponent implements OnInit {
   @Input()
-  color: 'primary' | 'accent' | 'warn' | "" = ""
+  color!: 'primary' | 'accent' | 'warn';
 
   @Input()
   disabled?: boolean

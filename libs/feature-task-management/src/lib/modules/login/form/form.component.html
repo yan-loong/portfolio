@@ -1,0 +1,33 @@
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+
+    <div class=" grid grid-cols-1 gap-1 sm:gap-3 text-size-inherit">
+        <!-- username -->
+        <mat-form-field class="font-primary-regular" appearance="fill">
+            <mat-label> {{"USERNAME" | translate}}</mat-label>
+            <input type="text" matInput formControlName="username" [placeholder]="'USERNAME' | translate">
+            <mat-error *ngIf="form.get('username')?.hasError('required')"
+                class="font-primary-bold upper-case uppercase">
+                {{"THIS_FIELD_IS_REQUIRED" | translate}}
+            </mat-error>
+        </mat-form-field>
+
+
+        <!-- password-->
+        <mat-form-field class="font-primary-regular" appearance="fill">
+            <mat-label> {{"PASSWORD" | translate}}</mat-label>
+            <input type="password" matInput formControlName="password" [placeholder]="'PASSWORD' | translate">
+            <mat-error *ngIf="form.get('password')?.hasError('required')"
+                class="font-primary-bold upper-case uppercase">
+                {{"THIS_FIELD_IS_REQUIRED" | translate}}
+            </mat-error>
+        </mat-form-field>
+    </div>
+
+    <div class="flex items-center justify-center mt-8">
+        <ui-button color="primary" type="submit" [disabled]="!!(form.pristine || (loading | async))">
+            <div>{{"LOG_IN" | translate}}</div>
+        </ui-button>
+    </div>
+
+</form>

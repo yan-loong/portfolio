@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ContainerComponent } from '../layout/container/container.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -21,6 +22,11 @@ const routes: Routes = [
         loadChildren: () => import('../../features/registration/registration.module').then(m => m.RegistrationModule)
       },
       {
+        path: 'board',
+        canLoad: [AuthGuard],
+        loadChildren: () => import('../../features/board/board.module').then(m => m.BoardModule)
+      },
+      {
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'
@@ -36,6 +42,7 @@ const routes: Routes = [
     redirectTo: 'ka',
     pathMatch: 'full'
   },
+
 
 ]
 

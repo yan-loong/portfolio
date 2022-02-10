@@ -18,11 +18,15 @@
     "FIRSTNAME": "სახელი",
     "LASTNAME": "გვარი",
     "EMAIL": "ემაილი",
+    "USERNAME":"მომხარებლის სახელი",
     "THIS_FIELD_IS_REQUIRED": "ეს ველი აუცილებელია",
     "INVALID_FORMAT": "არასწორი ფორმატი",
     "PASSWORD": "პაროლი",
     "CONFIRM_PASSWORD": "გაიმეორეთ პაროლი",
     "NOT_EQUAL_PASSWORD": "პაროლი არ ემთხვევა",
     "REGISTRATION_FINISHED_SUCCESSFULLY": "რეგისტრაცია წარმატებით დამთავრდა",
-    "REGISTRATION_FINISHED_UNSUCCESSFULLY": "რეგისტრაცია წარუამტებლად დამთავრდა"
+    "REGISTRATION_FINISHED_UNSUCCESSFULLY": "რეგისტრაცია წარუამტებლად დამთავრდა",
+    "USER_LOGIN_SUCCESSFULLY": "თქვენ წარმატებით გაიარეთ ავტორიზაცია",
+    "USER_LOGIN_UNSUCCESSFULLY": "შეყვანილი მონაცემები არასწორია",
+    "LOG_IN": "ავტრორიზაცია"
 }

@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroupDirective, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { User } from '@portfolio/common';
 import { LoginService, UserInfoStore } from '@portfolio/data-access';
@@ -14,6 +14,8 @@ import { BaseForm } from '../../shared/form/base-form';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FormComponent extends BaseForm implements OnInit {
+  @ViewChild(FormGroupDirective)
+  formGroup!: FormGroupDirective
 
   constructor(
     private fb: FormBuilder,

@@ -1,11 +1,15 @@
 
 require('dotenv').config();
 
-const { env } = process;
+const {
+  API_PORT,
+  DB_PORT,
+  DB_NAME
+} = process.env;
 
-const config = {
-  API_PORT: env.API_PORT,
-  DB_PORT: env.DB_PORT
+
+export default {
+  API_PORT,
+  DB_PORT,
+  DB_NAME,
 }
-
-export default config

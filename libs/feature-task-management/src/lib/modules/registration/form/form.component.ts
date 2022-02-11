@@ -1,10 +1,11 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { User } from '@portfolio/common';
 import { RegistrationService } from '@portfolio/data-access';
 import { BehaviorSubject, catchError, delay, finalize, of, Subject } from 'rxjs';
 import { LoggerService } from '../../../services/logger.service';
+import { RoutingService } from '../../../services/routing.service';
 import { BaseForm } from '../../shared/form/base-form';
 import { equalValidator } from '../validators/equal.validator';
 
@@ -15,21 +16,24 @@ import { equalValidator } from '../validators/equal.validator';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FormComponent extends BaseForm implements OnInit {
+  @ViewChild(FormGroupDirective)
+  formGroup!: FormGroupDirective
 
   constructor(
     private registrationService: RegistrationService,
     private fb: FormBuilder,
     private loggerService: LoggerService,
+    private routingService: RoutingService
   ) {
     super();
 
     this.form = this.fb.group(
       {
-        firstName: ['', [Validators.required]],
-        lastName: ['', [Validators.required]],
-        email: ['', [Validators.required, Validators.email]],
-        password: ['', [Validators.required]],
-        confirmPassword: ['', [Validators.required]]
+        firstName: [null, [Validators.required]],
+        lastName: [null, [Validators.required]],
+        email: [null, [Validators.required, Validators.email]],
+        password: [null, [Validators.required]],
+        confirmPassword: [null, [Validators.required]]
       },
       { validators: equalValidator('password', 'confirmPassword') }
     )
@@ -37,8 +41,8 @@ export class FormComponent extends BaseForm implements OnInit {
   }
 
   ngOnInit(): void {
-
-
+    console.log(this.form.get('email')?.hasError('required'))
+    console.log(this.form)
   }
 
   submit() {
@@ -52,10 +56,11 @@ export class FormComponent extends BaseForm implements OnInit {
         .subscribe(
           {
             next: (res) => {
-              this.loggerService.logSuccess("REGISTRATION_FINISHED_SUCCESSFULLY")
+              this.routingService.navigateToAbsolute('/login')
+              this.loggerService.logSuccess("REGISTRATION_FINISHED_SUCCESSFULLY");
             },
             error: (error) => {
-              this.loggerService.logError("REGISTRATION_FINISHED_UNSUCCESSFULLY")
+              this.handleError();
             }
           }
         )
@@ -63,5 +68,9 @@ export class FormComponent extends BaseForm implements OnInit {
   }
 
 
+  protected override handleError() {
+    super.handleError();
+    this.loggerService.logError("REGISTRATION_FINISHED_UNSUCCESSFULLY");
+  }
 
 }

@@ -1,10 +1,15 @@
-import { FormGroup } from "@angular/forms";
+import { Component, Directive, Injectable, ViewChild } from "@angular/core";
+import { FormGroup, FormGroupDirective } from "@angular/forms";
 import { BehaviorSubject } from "rxjs";
 
+
 export abstract class BaseForm {
+
+
     loading = new BehaviorSubject<boolean>(false);
     form!: FormGroup;
 
+    abstract formGroup: FormGroupDirective
     abstract submit(): void;
 
     get isValid(): boolean {
@@ -17,6 +22,11 @@ export abstract class BaseForm {
 
     get isLoading(): boolean {
         return this.loading.value
+    }
+
+    protected handleError() {
+        this.form.reset();
+        this.formGroup.resetForm();
     }
 
     constructor() { }

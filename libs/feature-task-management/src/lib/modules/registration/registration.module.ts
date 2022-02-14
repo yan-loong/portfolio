@@ -6,8 +6,6 @@ import { TranslateModule } from '@ngx-translate/core';
 import { ButtonModule, InputModule } from '@portfolio/ui';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { RegistrationService } from '@portfolio/data-access';
-
 
 
 @NgModule({
@@ -27,6 +25,5 @@ import { RegistrationService } from '@portfolio/data-access';
   exports: [
     FormComponent
   ],
-  providers: [RegistrationService]
 })
 export class RegistrationModule { }

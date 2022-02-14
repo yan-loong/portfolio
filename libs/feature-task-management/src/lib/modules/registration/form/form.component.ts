@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/
 import { FormBuilder, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { TranslateService } from '@ngx-translate/core';
 import { User } from '@portfolio/common';
-import { RegistrationService } from '@portfolio/data-access';
+import { UserService } from '@portfolio/data-access';
 import { BehaviorSubject, catchError, delay, finalize, of, Subject } from 'rxjs';
 import { LoggerService } from '../../../services/logger.service';
 import { RoutingService } from '../../../services/routing.service';
@@ -20,7 +20,7 @@ export class FormComponent extends BaseForm implements OnInit {
   formGroup!: FormGroupDirective
 
   constructor(
-    private registrationService: RegistrationService,
+    private userService: UserService,
     private fb: FormBuilder,
     private loggerService: LoggerService,
     private routingService: RoutingService
@@ -49,7 +49,7 @@ export class FormComponent extends BaseForm implements OnInit {
     if (this.isValid && !this.isLoading) {
       this.loading.next(true);
 
-      this.registrationService.registration(this.value)
+      this.userService.registration(this.value)
         .pipe(
           finalize(() => this.loading.next(false))
         )
